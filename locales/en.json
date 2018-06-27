@@ -1,0 +1,12 @@
+{
+	"gender_0": "gender 0",
+	"gender_1": "gender 1",
+	"gender_2": "gender 2",
+	"mailer_template_dir": "ltr",
+	"not_authorized_token": "not authorized token",
+	"permission_denied": "permission denied",
+	"user-permissions_error_not_found": "user-permissions error not found",
+	"users_error_accessToken": "users error accessToken",
+	"users_error_instance": "users error instance",
+	"users_error_login": "users error login"
+}
