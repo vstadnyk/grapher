@@ -1,2 +1,2 @@
-# grapher v.1.4.3
+# Grapher v.1.4.3
 GraphQL API server
