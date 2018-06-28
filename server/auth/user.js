@@ -1,5 +1,4 @@
 import Crypto from 'crypto'
-import schema from './schema'
 
 export default class User {
 	constructor(thinky) {
@@ -11,10 +10,22 @@ export default class User {
 	get table() {
 		return 'User'
 	}
+	get schema() {
+		if (!this.orm) return null
+
+		const { type } = this.orm
+
+		return {
+			id: type.string(),
+			mail: type.string().email(),
+			pass: type.buffer(),
+			salt: type.string()
+		}
+	}
 	get model() {
 		return (
 			this.orm.models[this.table] ||
-			this.orm.createModel(this.table, schema)
+			this.orm.createModel(this.table, this.schema)
 		)
 	}
 	async add(user = {}) {

@@ -1,0 +1,9 @@
+{
+	"alias": "dev",
+	"name": "Developer",
+	"rules": {},
+	"developer": {
+		"mail": "dev@domain.com",
+		"pass": "123"
+	}
+}

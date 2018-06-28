@@ -34,8 +34,7 @@ export default class extends Proto {
 		return controller.available
 	}
 	async _addUserPermission(_, { input }, { db, locale, auth }) {
-		await controller.use(db, locale, auth)
-		// .user.can(`${controller.table}-add`)
+		await controller.use(db, locale, auth).user.can(`${controller.table}-add`)
 
 		await controller.addPermision(input)
 
@@ -51,8 +50,7 @@ export default class extends Proto {
 		return true
 	}
 	async _addUserPermissionRolesAll(_, { input }, { db, locale, auth }) {
-		await controller.use(db, locale, auth)
-		// .user.can(`${controller.table}-delegate-all`)
+		await controller.use(db, locale, auth).user.can(`${controller.table}-delegate-all`)
 
 		await controller.use(db, locale, auth).delegateAll(input)
 

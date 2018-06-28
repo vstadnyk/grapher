@@ -191,7 +191,7 @@ export default class extends Controller {
 
 		return user
 	}
-	async removeUsers(where) {
+	async removeUsers(where, errors = true) {
 		const rUsers = await this.auth.User.model
 
 		for (const rUser of rUsers) {
@@ -208,9 +208,13 @@ export default class extends Controller {
 					.run()
 		}
 
-		const list = await this.list(where, ['id', 'rid', 'photo'])
+		const list = await this.list(where, {
+			attributes: ['id', 'rid', 'photo']
+		})
 
-		if (!list || !list.count)
+		if (!list && !errors) return null
+
+		if (!list)
 			throw new Error(this.locale.get(`${this.table}_error_not_found`))
 
 		for (const user of list.rows) {

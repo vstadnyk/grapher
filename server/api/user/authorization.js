@@ -9,8 +9,6 @@ export default class extends Controller {
 		this.parent = parent
 	}
 	async register(data = {}, options = false) {
-		await this.parent.validator.validate(data)
-
 		const rUser = await this.parent.auth.addUser(data)
 
 		if (!rUser)

@@ -7,7 +7,7 @@ global.envPort = key => {
 			https,
 			ws
 		}
-	})(...JSON.parse(process.env.PORTS))
+	})(...JSON.parse(process.env.PORTS || '[]'))
 
 	return ports[key] || null
 }

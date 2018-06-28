@@ -16,6 +16,7 @@
 		"build": "babel -d ./dist ./server -s",
 		"start": "yarn lint && yarn build && PORTS=[3000,3443,3050] node ./dist/index",
 		"dev": "PORTS=[3000,3443,3050] node ./server/index",
+		"setup": "node ./setup",
 		"lint": "eslint ./server"
   },
   "babel": {

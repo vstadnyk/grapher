@@ -13,6 +13,19 @@ export default class Auth {
 	constructor() {
 		this.passport = Passport
 	}
+	async start() {
+		if (!this.User)
+			await (this.User = new User(new Thinky(rdbConfig.connect)))
+
+		return true
+	}
+	async close() {
+		if (this.User) {
+			this.User.rdb.getPoolMaster().drain()
+		}
+
+		return true
+	}
 	get user() {
 		const { access, refresh } = tokens
 
