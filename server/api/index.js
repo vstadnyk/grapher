@@ -84,8 +84,7 @@ export default class API {
 			pubsub: this.resolver.pubsub
 		})
 
-		await router
-			.post(endpointURL, async ctx => {
+		await router.post(endpointURL, async ctx => {
 				global.publicUrl = (ctx.req.connection.encrypted
 					? 'https'
 					: 'http'
@@ -94,7 +93,7 @@ export default class API {
 				await GraphqlServer({
 					schema,
 					context,
-					tracing: false,
+					tracing: true,
 					rootValue: ctx,
 					cacheControl: false,
 					debug: false,
