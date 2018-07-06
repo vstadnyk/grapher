@@ -1,0 +1,17 @@
+{
+    "presets": [
+        [
+            "env",
+            {
+                "targets": {
+                    "node": "current"
+                }
+            }
+        ]
+    ],
+    "plugins": [
+        "syntax-dynamic-import",
+        "dynamic-import-node"
+    ],
+    "retainLines": true
+}

@@ -1,0 +1,20 @@
+[
+	"locale-edit",
+	"locale-show",
+	"mail-send",
+	"mail-templates-add",
+	"mail-templates-edit",
+	"mail-templates-remove",
+	"mail-templates-show",
+	"user-permissions-add",
+	"user-permissions-delegate-all",
+	"user-permissions-edit",
+	"user-permissions-show",
+	"user-permissions-show-config",
+	"users-add",
+	"users-edit",
+	"users-edit-profile",
+	"users-ignore-instance",
+	"users-remove",
+	"users-show"
+]

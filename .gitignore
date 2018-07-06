@@ -1,10 +1,4 @@
-/node_modules/*
-/dist/*
-/log/*
+build
+node_modules
 .DS_Store
-rethinkdb.log
-error.log
-db.sql
-rdb-dump.tar.gz
-rethinkdb_data/*
-/static/uploads*
+.vscode

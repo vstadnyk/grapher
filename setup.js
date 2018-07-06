@@ -1,33 +1,31 @@
 require('babel-core/register')
 require('babel-polyfill')
 
-const { default: DB } = require('./server/db')
-const { default: Locale } = require('./server/locale')
-const { default: Auth } = require('./server/auth/index')
-const { default: User } = require('./server/api/user/controller')
+const { default: DB } = require('./src/lib/db')
+const { default: Locale } = require('./src/lib/locale')
+const { default: Auth } = require('./src/server/auth/index')
+const { default: User } = require('./src/server/api/user/controller')
 const {
-	default: Permissions
-} = require('./server/api/user/permission/controller')
+	default: Permissions,
+} = require('./src/server/api/user/permission/controller')
 
 const key = require('./setup.json')
-const availableRules = require('./server-data/permissions.json')
+const availableRules = require('./static/server-data/permissions.json')
 
-;
-
-(async () => {
+const run = async () => {
 	if (!key) throw new Error('Key not found')
 
 	const db = new DB()
-	const perm = new Permissions()
 	const user = new User()
 	const auth = new Auth()
 	const locale = new Locale()
+	const perm = new Permissions()
 
 	const {
 		alias,
 		name,
 		rules,
-		developer: { mail, pass }
+		developer: { mail, pass },
 	} = key
 
 	try {
@@ -35,11 +33,11 @@ const availableRules = require('./server-data/permissions.json')
 		await db.start()
 		await locale.init()
 
-		for (const iterator of [user, perm]) {
-			iterator.use(db, auth, locale)
+		for (const it of [user, perm]) {
+			it.use(db, auth, locale)
 
-			await db.model(iterator.table, iterator.fields).sync({
-				force: false
+			await db.model(it.table, it.fields).sync({
+				force: false,
 			})
 		}
 
@@ -53,21 +51,21 @@ const availableRules = require('./server-data/permissions.json')
 			await perm.add({
 				name,
 				alias,
-				rules
+				rules,
 			})
 		}
 
 		await user.removeUsers(
 			{
-				mail
+				mail,
 			},
-			false
+			false,
 		)
 
 		await user.addUser({
 			mail,
 			pass,
-			permission: alias
+			permission: alias,
 		})
 
 		await db.orm.connectionManager.close()
@@ -75,4 +73,6 @@ const availableRules = require('./server-data/permissions.json')
 	} catch (error) {
 		throw new Error(`Ooops, we have error :(`)
 	}
-})()
+}
+
+run()
