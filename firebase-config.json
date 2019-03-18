@@ -1,0 +1,15 @@
+{
+	"authKey": {
+		"type": "service_account",
+		"project_id": "grapher-server-demo",
+		"private_key_id": "df67f378e125c3b71fceb6947c7c838bd550aadd",
+		"private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCh8Kv0PXFCGmTp\nWdDcgQLbubdOMvesD+7uUPxZf+FfYJmBWWQsTPESGsABs760k6efMsIB+aY+li0o\nF9UuWs2cQNJGHOGbDRrKdDjRZEZOrAU2xFUdtannAzd7hNstxFbWag9ShNT+F9f8\nE0F+qPTBqjLo6gOxiFlWYbvvVzooF/grpaxiAqyi0T0JeG8+RUakq2I9WjJHD1z6\ntb7j4pQ1ufE4exjZdVhOwe4uzxcG2Q4GpCiCFaIsW9Ck1cw5CkfMzjwEC2QBVImC\n8r/9dqLVBvVHHehaCHpzxwUfGciYjg3UROiOVeYEHkSrP5rZI58iSsWsd8aWm8DC\nIUJQIwotAgMBAAECggEAN4irx1nMvcEEaxuwavXZD5XcHTaQRdK++r4OE/ktRgKA\nEeIgXqrSHwXKY6sK0q0yFf+XlYrR7nOcr7ugkUF1ckiuc3nTClOPpO7/TxtmmvMV\n5Kamk8YpKj4pqDOy4DqNFwGPGJrR2gM+P8UwuCljqgheZg5eTuL11BA3HUhZ+sZV\ngSqwUdOIBt0af8mU3ClyhrTvgUTx2B0v8sjjVf5edMruTX746bnrdsKSKE3SEpr0\nVoThpCBIyx6TcrMhcRtKm3pe9OgsCfkbJnE5C7ZIct4sfVmCdRE3i48PsExL6fuA\nwlWZ63hgi/zFrKCbpzEZVFjtY5bEJHNx8BJxpXSKdwKBgQDbAbIKDskpTUnfLpI2\n/B5C8WHePrWDA2lgi9unXtuOLGfhYnW/wW+R4hYNiIE6hSskBBmB6x1bNwCkNKmF\nVaGqkeTTbJayf28PfreAY19oZrL41cynu19K3xd2JU6c0scSxluYKeOTPmF1RN1n\nv1/9YAUyafhCoMJYibVChQREewKBgQC9S00qP/+2cIpRgMxMbyo2jWQKx0Mpdn79\nRUK8mzD+PktSu/7oWi0Gdf0TtbXWQnXyVMS640nNHnjp9YADkRAOClkJvPsh8Xdu\nBvvWLRhfBZbcyaQKyVhyiDkgb7ovX+IAmQcGFCZ2Dn3uhTtnymEukjec/i+3IuAp\nvgZLgiwPdwKBgANgCVBiXfNG/6Zy30n9pLG/apS0PrPgL5WPUjlIGvYb9RXiIJJt\n9rw20cQvoF44gyuw7Hu2FeO7+0SMkzg805r/WJlxiPkDQcDpYQaXgXbobkWrddX3\n60YKHiBx/r4n+W1upSa5LoqsYXAfOZJJvr725d2bCHpuY9Bdfu+hgSlVAoGAZNyC\nuUhwkF1W1iaytOdmrrqX28Zg2u7wqzMEZEqsyEuZBvR01ol2BENKHf5sbUXsYrsY\nOBxzboAWHVNaaowY6eJJnw67IVLwOAgwl+ZfXgI0aGBor/ao0h4Tklz179g/K+Je\nA7co5y7Bmx4SkTMcpRvz1gr6kbJbjuJZqFIr9/ECgYEA0i5LrP0UzPzdzC5aHYdS\nKhj3FeY4xwlCjqVMeBxbmS0Mw5RVnwq9rYN0RlXjBzd7vBPVA/40Q9Ul9D4gfpye\ndBBr+sErXYSjayalm5I4WfW7ZM6PdHWp0Sy7q8QqudzpsTc3299ca1kGwiSOdEkW\n6eVT3JdQgSvgP+T5Mu+U0GE=\n-----END PRIVATE KEY-----\n",
+		"client_email": "firebase-adminsdk-lv62s@grapher-server-demo.iam.gserviceaccount.com",
+		"client_id": "108036635342379676334",
+		"auth_uri": "https://accounts.google.com/o/oauth2/auth",
+		"token_uri": "https://oauth2.googleapis.com/token",
+		"auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+		"client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-lv62s%40grapher-server-demo.iam.gserviceaccount.com"
+	},
+	"databaseURL": "https://grapher-server-demo.firebaseio.com"
+}

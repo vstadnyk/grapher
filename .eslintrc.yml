@@ -1,0 +1,46 @@
+---
+parser: babel-eslint # esprima
+
+plugins:
+  - import
+  - prettier
+  - graphql
+
+extends:
+  - airbnb-base
+  - prettier
+  - plugin:import/errors
+  - plugin:import/warnings
+
+env:
+  node: true
+
+parserOptions:
+  sourceType: module
+  ecmaVersion: 11
+  ecmaFeatures: 
+    impliedStrict: false
+    modules: true
+    experimentalObjectRestSpread: true
+ 
+rules:
+  import/no-unresolved: [2, {commonjs: true, amd: true}]
+  import/named: 2
+  import/namespace: 0
+  import/default: 0
+  import/export: 2
+  import/no-cycle: 0
+  import/no-named-as-default: 0
+  import/no-named-as-default-member: 0
+  semi: [2, "never"]
+  comma-dangle: 0
+  prettier/prettier: "error"
+  no-underscore-dangle: 0
+  no-console: 0
+  class-methods-use-this: 0
+  camelcas": 0
+  no-restricted-syntax: 0
+  no-param-reassign: 0
+  lines-between-class-members: 0
+  camelcase: 0
+  

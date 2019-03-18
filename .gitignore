@@ -1,4 +1,15 @@
-build
 node_modules
 .DS_Store
-.vscode
+rethinkdb.log
+rethinkdb_data
+
+static/log
+static/uploads
+static/schema/*
+static/storage/*
+static/locales/*
+
+yarn.lock
+apps
+static/ssl/default.cert
+static/ssl/default.key

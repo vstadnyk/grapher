@@ -1,14 +1,5 @@
 {
-	"user-permissions_error_not_found": "user-permissions error not found",
-	"permission_denied": "permission denied",
-	"gender_1": "gender 1",
-	"gender_2": "gender 2",
-	"mailer_template_dir": "ltr",
-	"not_authorized_token": "not authorized token",
-	"gender_0": "gender 0",
-	"users_error_accessToken": "users error accessToken",
-	"users_error_email_exists": "users error email exists",
-	"users_error_instance": "users error instance",
+	"users_error_jwt_auth": "users error jwt auth",
 	"users_error_login": "users error login",
-	"users_error_not_found": "users error not found"
+	"users_error_permission_denied": "users error permission denied"
 }
